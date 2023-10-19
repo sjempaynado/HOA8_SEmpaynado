@@ -1,0 +1,13 @@
+
+- name: install nagios in Ubuntu
+  apt:
+    name:
+      - nagios4
+    state: latest
+    update_cache: yes
+
+- name: start nagios in Ubuntu
+  service:
+    name: nagios4
+    state: restarted
+    enabled: true
